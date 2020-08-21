@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class BadgetsList extends React.Component {
 
@@ -7,6 +8,20 @@ class BadgetsList extends React.Component {
     }
 
     render() {
+
+        if (!this.props.badges) {
+            return (
+                <div>
+                    <h3>
+                        No badges were not found
+                        </h3>
+                    <Link className="btn btn-primary" to="/badges/new">
+                        Create new badge
+                    </Link>
+                </div >
+            )
+        }
+
         return (
             <ul className="list-unstyled">
                 {this.props.badges.map(badge =>
