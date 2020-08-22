@@ -1,5 +1,5 @@
 import React from "react";
-import header from "../images/badge-header.svg"
+import header from "../images/platziconf-logo.svg"
 
 import "../pages/styles/BadgeNews.css"
 import Badge from "../components/Badge"
@@ -26,16 +26,16 @@ class BadgeNew extends React.Component {
         return (
             <div>
                 <div className="BadgeNew__hero">
-                    <img className="img-fluid" src={header} alt="Logo" />
+                    <img className="BadgeNew__hero-image img-fluid" src={header} alt="Logo" />
                 </div>
                 <div className="container">
                     <div className="row">
                         <div className="col-6">
                             <Badge
-                                firstName={this.state.form.firstName}
-                                lastName={this.state.form.lastName}
-                                twitter={this.state.form.twitter ? "@" + this.state.form.twitter : this.state.form.twitter}
-                                jobTitle={this.state.form.jobTitle}
+                                firstName={this.state.form.firstName || 'FIRST_NAME'}
+                                lastName={this.state.form.lastName || 'LAST_NAME'}
+                                twitter={this.state.form.twitter ? "@" + this.state.form.twitter : this.state.form.twitter || 'twitter'}
+                                jobTitle={this.state.form.jobTitle || 'JOB_TITLE'}
                                 avatarUrl="https://www.gravatar.com/avatar?d=identicon" />
                         </div>
                         <div className="col-6">
