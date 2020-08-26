@@ -55,7 +55,7 @@ class Badges extends React.Component {
                 </div>
 
                 <div className="Badge__container">
-                    <div className="Badges__buttons pr-5">
+                    <div className="Badges__buttons pr-4">
                         <Link to="/badges/new" className="btn btn-primary">
                             New Badge
                         </Link>
